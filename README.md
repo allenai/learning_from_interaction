@@ -11,15 +11,25 @@ as well as novel object categories.
 
 ![](inference.png)
 
+## Citing
+```
+@inproceedings{ml2020learnfromint,
+  author = {Lohmann, Martin and Salvador, Jordi and Kembhavi, Aniruddha and Mottaghi, Roozbeh},
+  title = {Learning About Objects by Learning to Interact with Them},
+  booktitle = {NeurIPS},
+  year = {2020}
+}
+```
+
 ## Setup
 
-0. Requirements
+#### Requirements
 
     This code has been developed and tested on Ubuntu 16.04.4 LTS. We assume xserver-xorg is installed, and
     CUDA drivers are available along at least two compute devices (with 12 GB of memory each) for training or one device
     for evaluation. We use `python3.6`.
 
-0. Structure
+#### Structure
 
     The following subfolders are available:
     - `dataset`, containing training and test datasets for both `NovelSpaces` and
@@ -29,7 +39,7 @@ as well as novel object categories.
     - `trained_model_novel_spaces` and `trained_model_novel_objects`, containing the trained model weights used for the
     results reported in the manuscript for the corresponding datasets.
    
-0. Environment
+#### Environment
     
     We recommend creating a virtual environment with `python3.6` to run the code. For example, from the top
     level folder, we can run
@@ -46,7 +56,7 @@ as well as novel object categories.
 
 ## Running the code
 
-0. Training
+#### Training
 
     If xorg is not already running (even if it is installed), we provide a utility script that must be run as root:
     - `sudo python3.6 startx.py &> ~/logxserver &`
@@ -58,7 +68,7 @@ as well as novel object categories.
     Note that, depending on the compute capabilities of the machine, training can take in the order of 2 days to
     complete.
     
-0. Evaluation
+#### Evaluation
 
     Again, make sure xorg is running or `sudo python3.6 startx.py &> ~/logxserver &`.
     
@@ -74,13 +84,13 @@ as well as novel object categories.
     
 ## Evaluation
 
-### About stochasticity
+#### About stochasticity
 Even though our model does not require interaction at test time, to minimize storage space and data downloads, we
 provide our evaluation dataset in this release in terms of AI2-THOR controller states. Some minor stochasticity is
 involved when the controller renders these states into model inputs (images) and ground truth labels. For this reason,
 the evaluation metrics for a model checkpoint can fluctuate slightly.
 
-### Results
+#### Results
 The results obtained by the `eval.py` script should fluctuate around the following values:
 
 |   Dataset   | BBox AP50 | BBox AP | Segm AP50 | Segm AP | Mass+BBox AP50 | Mass mean per-class accuracy |

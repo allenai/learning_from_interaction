@@ -97,3 +97,7 @@ The results obtained by the `eval.py` script should fluctuate around the followi
 |:------------|:---------:|:-------:|:---------:|:-------:|:--------------:|:----------------------------:|
 | NovelObjects|   24.19   |  11.65  |   22.00   |  10.24  |      11.85     |            50.79             |
 | NovelSpaces |   27.59   |  13.44  |   25.01   |  11.00  |      11.01     |            55.86             |
+
+#### Qualitative example
+Here is an illustration of the different ingredients of our training process:
+![](training_video.gif)

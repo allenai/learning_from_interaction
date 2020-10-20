@@ -100,4 +100,5 @@ The results obtained by the `eval.py` script should fluctuate around the followi
 
 #### Qualitative example
 Here is an illustration of the different ingredients of our training process:
+
 ![](training_video.gif)
